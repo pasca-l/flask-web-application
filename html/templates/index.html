@@ -3,27 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>簡易掲示板</title>
-        <script type=text/javascript src="../static/log.js" defer></script>
     </head>
     <body>
         <h1>Bulletin board</h1>
 
         <div id="form">
             <textarea id="loginput" rows="8" cols="80"></textarea>
-            <input type="submit" id="submitbtn" value="Post">
-            <div id="clock">
-
-            </div>
+            <input type="button" id="submitbtn" value="Post">
+            <div id="clock"></div>
+            <script type=text/javascript src="../static/post.js"></script>
         </div>
 
-        <form action="" method='POST'>
-            <input type="submit" id="savebtn" value="Save">
-        </form>
-
         <div id="log">
+            <input type="submit" id="savebtn" value="Save">
             <ul id="timeline">
 
             </ul>
+            <script type=text/javascript src="../static/log.js"></script>
+        </div>
+
+        <div id="test">
+
         </div>
 
     </body>

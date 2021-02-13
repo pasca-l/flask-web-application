@@ -3,13 +3,12 @@ app = Flask(__name__, template_folder='html/templates', static_folder='html/stat
 
 @app.route("/", methods=['POST', 'GET'])
 def index():
-    return render_template("index.html")
-
-@app.route("/confirm", methods=['POST', 'GET'])
-def confirm():
     if request.method == 'POST':
-        result = request.form["name"]
-        return render_template("confirm.html", result=result)
+        log = request.get_json()
+        print(str(log))
+        with open("log.json", 'w') as logfile:
+            logfile.write(str(log))
+    return render_template("index.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
