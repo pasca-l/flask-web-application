@@ -1,5 +1,5 @@
 const save = document.getElementById("savebtn");
-save.onsubmit = function saveLog(){
+save.onclick = function saveLog(){
     let wholelog = document.getElementById("timeline");
     let json_text = JSON.stringify({html : wholelog.outerHTML});
     console.log(json_text);
@@ -8,6 +8,14 @@ save.onsubmit = function saveLog(){
     xhr.open('post', "/");
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(json_text);
+
+    alert("saved as json file!");
+}
+
+
+const load = document.getElementById("loadbtn");
+load.onclick = function loadLog(){
+    let json_text = None;
 }
 
 
